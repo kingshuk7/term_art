@@ -6,12 +6,8 @@ if [ "$#" -lt 1 ]; then
     exit 1
 fi
 
-TextFile="~/term-art/standard.txt"
-
-# Check if a second command-line argument is provided (for the file name)
-if [ "$#" -gt 1 ]; then
-    TextFile="$1" # Get file name from command-line argument
-fi
+TextFile="$1"
+shift # Remove the first argument
 
 # Check if the file exists
 if [ ! -e "$TextFile" ]; then
@@ -19,13 +15,13 @@ if [ ! -e "$TextFile" ]; then
     exit 1
 fi
 
-# Read the text to be printed
-text="$2"
+# Read the text to be printed (treat space-separated strings as one argument)
+text="$*"
 
 # Read the font file and store the lines in an array
 readarray -t fontList < "$TextFile"
 
-# Split the user's input based on the "\\n" delimiter
+# Split the user's input based on newline characters
 IFS=$'\n' read -ra splitText <<< "$text"
 
 # Iterate through each line in the splitText array
