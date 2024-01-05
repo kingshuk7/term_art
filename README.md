@@ -21,7 +21,7 @@ The output will be in standard ASCII art
                                 
 ```
 ```bash
-bash term_art.sh ./shadow.txt Hello
+bash term_art.sh ./shadow.txt "Hello"
 ```
 The output will be in shadow ASCII art
 ```
@@ -35,7 +35,7 @@ _|    _|   _|_|_| _| _|   _|_|
 
 ```                                 
 ```bash
-bash term_art.sh ./thinkertoy.txt Hello
+bash term_art.sh ./thinkertoy.txt "Hello"
 ```
 The output will be in thinkertor ASCII art
 ```
