@@ -7,7 +7,7 @@ Term-Art is an ASCII Art generator written in bash for Linux Terminal. It's quit
 cd ~
 git clone git@github.com:kingshuk7/term_art.git
 cd term-art
-bash term-art ./standard.txt "Hello"
+bash term-art.sh ./standard.txt "Hello"
 ```
 The output will be in standard ASCII art
 ```
